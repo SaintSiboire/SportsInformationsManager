@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SportsInformationsManager.Data.Context">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Data\Context.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Athletes" />
+      <Property Name="Sports" />
+      <Property Name="Competitions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SportsInformationsManager.Data.DatabaseInitializer">
+    <Position X="14" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DatabaseInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsInformationsManager.Models.Athlete">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQEAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAg=</HashCode>
+      <FileName>Models\Athlete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsInformationsManager.Models.Competition">
+    <Position X="12" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAECAAAAAAAA=</HashCode>
+      <FileName>Models\Competition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsInformationsManager.Models.Participation">
+    <Position X="8.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAAAAAAAAACAAAAAAAAAAAAACAAAQAAAA=</HashCode>
+      <FileName>Models\Participation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Athlete" />
+      <Property Name="Sport" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SportsInformationsManager.Models.Sport">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAQAAAAAABAAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Sport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsInformationsManager.Program">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
