@@ -20,9 +20,7 @@ namespace SportsInformationsManager.Data
 			return context;
 		}
 
-		public void newFontion()
-		{ }
-
+	
 
 
 	}
