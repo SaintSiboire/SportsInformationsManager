@@ -21,6 +21,7 @@ namespace SportsInformationsManager.Data
                 FirstName = "Bob",
                 LastName = "Marley",               
             };
+			context.Athletes.Add(athlete1);
 			
 
             var athlete2 = new Athlete()
@@ -28,77 +29,85 @@ namespace SportsInformationsManager.Data
                 FirstName = "Jacques",
                 LastName = "Plante",
             };
+			context.Athletes.Add(athlete2);
 
-            var athlete3 = new Athlete()
+			var athlete3 = new Athlete()
             {
                 FirstName = "Yves",
                 LastName = "Morissette",
             };
+			context.Athletes.Add(athlete3);
 
 			var athlete4 = new Athlete()
 			{
 				FirstName = "Elvis",
 				LastName = "Presley",
 			};
+			context.Athletes.Add(athlete4);
 
 			var athlete5 = new Athlete()
 			{
 				FirstName = "Chuck",
 				LastName = "Noris",
 			};
+			context.Athletes.Add(athlete5);
 
 			var sport1 = new Sport()
 			{
 				Name = "Athlétisme",
 			};
-			sport1.AddAthlete(athlete1);
-			sport1.AddAthlete(athlete2);
-			sport1.AddAthlete(athlete3);
+			context.Sports.Add(sport1);
+			
 
 			var sport2 = new Sport()
 			{
 				Name = "Lutte",
 			};
-			sport2.AddAthlete(athlete4);
-			sport2.AddAthlete(athlete5);
+			context.Sports.Add(sport2);
+
 
 
 			var competition1 = new Competition()
             {
-                Place = "Stade Athlétisme",
-                Sport = sport1,				
+                Location = "Stade Athlétisme",
+                SportId = 1,				
                 CompetitionDate = new DateTime(2018,3,1)
             };
+			competition1.AddAthlete(athlete1);
+			competition1.AddAthlete(athlete2);
+			competition1.AddAthlete(athlete3);
 			context.Competitions.Add(competition1);
 
 			var competition2 = new Competition()
 			{
-				Place = "Amphithéatre",
-				Sport = sport2,
+				Location = "Amphithéatre",
+				SportId = 2,
 				CompetitionDate = new DateTime(2018,3,1)
 			};
+			competition2.AddAthlete(athlete4);
+			competition2.AddAthlete(athlete5);
 			context.Competitions.Add(competition2);
 
 			var result1 = new Result()
 			{
-				Athlete = athlete1,
-				Competition = competition1,
+				AthleteId = 1,
+				CompetitionId = 1,
 				Position = 1
 			};
 			context.Results.Add(result1);
 
 			var result2 = new Result()
 			{
-				Athlete = athlete2,
-				Competition = competition1,
+				AthleteId = 2,
+				CompetitionId = 1,
 				Position = 2
 			};
 			context.Results.Add(result2);
 
 			var result3 = new Result()
 			{
-				Athlete = athlete3,
-				Competition = competition1,
+				AthleteId = 3,
+				CompetitionId = 1,
 				Position = 3
 			};
 			context.Results.Add(result3);

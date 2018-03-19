@@ -16,18 +16,18 @@ namespace SportsInformationsManager
 			using (var context = new Context())
 			{
 				var competitions = context.Competitions
-					.Include(c => c.Sport)
+					.Include(c => c.Athletes)
 					.ToList();
 
 				foreach(var competition in competitions)
 				{
-					var lieu = competition.Place;
-					var sport = competition.Sport.Name;
+					var lieu = competition.Location;
+					//var sport = competition.Sport.Name;
 					var date = competition.CompetitionDate;
 
 					Console.WriteLine("Emplacement : {0}", lieu);
 					Console.WriteLine("Date : {0}", date);
-					Console.WriteLine("Compétition de {0}", sport);
+					//Console.WriteLine("Compétition de {0}", sport);
 					Console.WriteLine();
 
 				}
