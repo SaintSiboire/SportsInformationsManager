@@ -7,7 +7,7 @@ using SportsInformationsManager.Data;
 
 namespace SportsInformationsManager.Models
 {
-	class Participation
+	public class Participation
 	{
 
 		public int Id { get; set; }
