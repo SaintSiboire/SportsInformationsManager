@@ -8,6 +8,10 @@ namespace SportsInformationsManager.Models
 {
     public class Competition
     {
+		public Competition()
+		{
+			Athletes = new List<Participation>();
+		}
 		
 
 		public int Id { get; set; }
@@ -16,7 +20,7 @@ namespace SportsInformationsManager.Models
         public DateTime CompetitionDate { get; set; }
 
 		
-		
+		public ICollection<Participation> Athletes { get; set; }
 
 
 	}
