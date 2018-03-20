@@ -16,7 +16,7 @@ namespace SportsInformationsManager.Models
         public DateTime CompetitionDate { get; set; }
 
 		
-		}
+		
 
 
 	}

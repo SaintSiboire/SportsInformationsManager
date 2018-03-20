@@ -73,9 +73,6 @@ namespace SportsInformationsManager.Data
                 SportId = 1,				
                 CompetitionDate = new DateTime(2018,3,1)
             };
-			competition1.AddAthlete(athlete1);
-			competition1.AddAthlete(athlete2);
-			competition1.AddAthlete(athlete3);
 			context.Competitions.Add(competition1);
 
 			var competition2 = new Competition()
@@ -84,30 +81,22 @@ namespace SportsInformationsManager.Data
 				SportId = 2,
 				CompetitionDate = new DateTime(2018,3,1)
 			};
-			competition2.AddAthlete(athlete4);
-			competition2.AddAthlete(athlete5);
 			context.Competitions.Add(competition2);
 
 			var result1 = new Result()
 			{
-				AthleteId = 1,
-				CompetitionId = 1,
 				Position = 1
 			};
 			context.Results.Add(result1);
 
 			var result2 = new Result()
 			{
-				AthleteId = 2,
-				CompetitionId = 1,
 				Position = 2
 			};
 			context.Results.Add(result2);
 
 			var result3 = new Result()
 			{
-				AthleteId = 3,
-				CompetitionId = 1,
 				Position = 3
 			};
 			context.Results.Add(result3);

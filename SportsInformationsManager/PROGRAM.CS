@@ -16,7 +16,7 @@ namespace SportsInformationsManager
 			using (var context = new Context())
 			{
 				var competitions = context.Competitions
-					.Include(context.)
+					.Include(context.Participations)
 					.ToList();
 				//var gagnants = from r in context.Results
 				//			   where r.Position == 1
