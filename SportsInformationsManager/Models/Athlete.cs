@@ -15,7 +15,6 @@ namespace SportsInformationsManager.Models
         public string LastName { get; set; }
 
 
-		public Athlete AthleteAdd { get; set; }
 
 
 
