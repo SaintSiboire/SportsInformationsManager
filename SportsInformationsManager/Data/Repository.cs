@@ -20,9 +20,16 @@ namespace SportsInformationsManager.Data
 			return context;
 		}
 
-		/// <summary>Private method to return database context.</summary>
-		/// <return>Instance of Context class</return>
-
+		/// <summary>Add an Athlete.</summary>
+		/// <param name="athlete">Atlete entity instance to add</param>
+		public static void AddAthlete(Athlete athlete)
+		{
+			using (Context context = GetContext())
+			{
+				context.Athletes.Add(athlete);
+				context.SaveChanges();
+			}
+		}
 
 	}
 }
