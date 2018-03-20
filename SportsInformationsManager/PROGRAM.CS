@@ -17,10 +17,8 @@ namespace SportsInformationsManager
 			{
 				var competitions = context.Competitions
 					.ToList();
-				//var gagnants = from r in context.Results
-				//			   where r.Position == 1
-				//			   join a in context.Athletes
-				//			  where a.Id == r.AthleteId;
+
+		
 
 				foreach(var competition in competitions)
 				{
