@@ -20,7 +20,8 @@ namespace SportsInformationsManager.Data
 			return context;
 		}
 
-	
+		/// <summary>Private method to return database context.</summary>
+		/// <return>Instance of Context class</return>
 
 
 	}

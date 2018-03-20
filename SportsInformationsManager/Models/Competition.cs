@@ -10,7 +10,7 @@ namespace SportsInformationsManager.Models
     {
 		public Competition()
 		{
-			Athletes = new List<Participation>();
+			Athletes = new List<Athlete>();
 		}
 
 		public int Id { get; set; }
@@ -18,13 +18,13 @@ namespace SportsInformationsManager.Models
         public string Location { get; set; }
         public DateTime CompetitionDate { get; set; }
 
-		public ICollection<Participation> Athletes { get; set; }
+		public ICollection<Athlete> Athletes { get; set; }
 
 		public void AddAthlete(Athlete athlete)
 		{
-			Athletes.Add(new Participation
+			Athletes.Add(new Athlete
 			{
-				Athlete = athlete
+				AthleteAdd = athlete
 			});
 		}
 

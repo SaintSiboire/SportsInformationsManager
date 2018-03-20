@@ -54,7 +54,6 @@
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Models\Athlete.cs" />
     <Compile Include="Models\Competition.cs" />
-    <Compile Include="Models\Participation.cs" />
     <Compile Include="Models\Result.cs" />
     <Compile Include="Models\Sport.cs" />
     <Compile Include="Program.cs" />
