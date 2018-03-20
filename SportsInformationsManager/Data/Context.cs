@@ -15,6 +15,7 @@ namespace SportsInformationsManager.Data
         public DbSet<Sport> Sports { get; set; }
         public DbSet<Athlete> Athletes { get; set; }
 		public DbSet<Result> Results { get; set; }
+		public DbSet<Participation> Participations { get; set; }
 
         public Context()
         {
