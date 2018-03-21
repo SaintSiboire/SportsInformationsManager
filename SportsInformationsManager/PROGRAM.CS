@@ -35,7 +35,7 @@ namespace SportsInformationsManager
 					//context.Sports.Where(s => s.Id == c.SportId);
 
 
-					Console.WriteLine("Emplacement : {0}", c.Location.);
+					Console.WriteLine("Emplacement : {0}", c.Location);
 					Console.WriteLine("Date : {0}", c.CompetitionDate);
 					Console.WriteLine("Compétition de {0}", context.Sports.Where(s => s.Id == c.SportId).Select(s => s.Name));
 					Console.WriteLine();
@@ -55,7 +55,7 @@ namespace SportsInformationsManager
 				}
 
 
-			}
+			
 
 
 				
