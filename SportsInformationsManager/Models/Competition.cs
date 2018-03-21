@@ -14,7 +14,7 @@ namespace SportsInformationsManager.Models
 		}
 		
 
-		public int Id { get; set; }
+		public int CompetitionId { get; set; }
         public int SportId { get; set; }
         public string Location { get; set; }
         public DateTime CompetitionDate { get; set; }
