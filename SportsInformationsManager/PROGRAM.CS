@@ -15,32 +15,36 @@ namespace SportsInformationsManager
 		{
 			using (var context = new Context())
 			{
-				var competitions = context.Competitions
+				var participations = context.Participations
 					.ToList();
 
 		
 
-				foreach(var competition in competitions)
+				foreach(var participation in participations)
 				{
-					var lieu = competition.Location;
-					//var sport = competition.Sport.Name;
-					var date = competition.CompetitionDate;
+					var competitions = context.Competitions.Where(c => c.Id == participation.CompetitionId).ToList();
 
-					Console.WriteLine("Emplacement : {0}", lieu);
-					Console.WriteLine("Date : {0}", date);
-					//Console.WriteLine("Compétition de {0}", sport);
-					Console.WriteLine();
+					foreach(var c in competitions)
+					{
+						Console.WriteLine("Emplacement : {0}", c.Location);
+						Console.WriteLine("Date : {0}", c.CompetitionDate);
+						Console.WriteLine("Compétition de {0}", context.Sports.Where(s => s.Id == c.SportId));
+						Console.WriteLine();
+					}
+
+					var athletes = context.Athletes.Where(a => a.Id == participation.AthleteId).ToList();
+					Console.WriteLine("Athlètes participants à la compétition :");
+
+					foreach(var a in athletes)
+					{
+						Console.WriteLine("Nom : {0} {1}", a.FirstName,a.LastName);
+						Console.WriteLine("Date de naissance : {0}", a.Naissance);
+						Console.WriteLine();
+					}
 
 				}
 
-				IList<Athlete> participants = context.Athletes.OrderBy(a => a.FirstName)
-					.ThenBy(a => a.LastName).ToList();
 
-				foreach(Athlete a in participants)
-				{
-					Console.WriteLine("Name = {0} {1}", a.FirstName, a.LastName);
-					Console.WriteLine();
-				}
 
 				
 				
