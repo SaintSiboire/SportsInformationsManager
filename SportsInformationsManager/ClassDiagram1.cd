@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SportsInformationsManager.Data.Context">
-    <Position X="9.5" Y="2.5" Width="1.5" />
+    <Position X="9" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAAAAAAAAAAAgAAAACACAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Data\Context.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Athletes" />
-      <Property Name="Sports" />
       <Property Name="Competitions" />
+      <Property Name="Sports" />
+      <Property Name="Athletes" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SportsInformationsManager.Data.DatabaseInitializer">
@@ -20,34 +20,33 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SportsInformationsManager.Models.Athlete">
-    <Position X="9.5" Y="4.25" Width="1.5" />
+    <Position X="9" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACQEAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAg=</HashCode>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAAg=</HashCode>
       <FileName>Models\Athlete.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SportsInformationsManager.Models.Competition">
-    <Position X="12" Y="4.25" Width="1.5" />
+    <Position X="11.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAQAAAAAAAAECAAAAAAAA=</HashCode>
+      <HashCode>AAADAAAAAAAAAAAAAAIACAAAQAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Models\Competition.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SportsInformationsManager.Models.Participation">
-    <Position X="8.75" Y="8.25" Width="1.5" />
+    <Position X="9.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAACAAAAAAAAAAAAACAAAAAAAAAAAAACAAAQAAAA=</HashCode>
+      <HashCode>AAAKAACAAAAAAAAAAAAAIAQAAACAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Models\Participation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Athlete" />
-      <Property Name="Sport" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SportsInformationsManager.Models.Sport">
-    <Position X="6.75" Y="4.25" Width="1.5" />
+    <Position X="6.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAADAAAAAAAAAAAAAAAAAAQAAAAAABAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Sport.cs</FileName>
     </TypeIdentifier>
   </Class>

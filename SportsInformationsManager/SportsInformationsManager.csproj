@@ -51,9 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AddCompetition.cs" />
     <Compile Include="Data\Context.cs" />
     <Compile Include="Data\DatabaseInitializer.cs" />
-    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Data\DisplayAthletes.cs" />
+    <Compile Include="Data\DisplayCompetitionAthletes.cs" />
+    <Compile Include="Data\DisplayCompetitions.cs" />
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
     </Compile>

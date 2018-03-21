@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SportsInformationsManager.Models;
-using System.Data.Entity;
-using System.Diagnostics;
 
 namespace SportsInformationsManager.Data
 {
-	public class Repository
+	public class AddCompetition
 	{
 		/// <summary>Private method to return database context.</summary>
 		/// <return>Instance of Context class</return>
@@ -20,16 +19,6 @@ namespace SportsInformationsManager.Data
 			return context;
 		}
 
-		/// <summary>Add an Athlete.</summary>
-		/// <param name="athlete">Atlete entity instance to add</param>
-		public static void AddAthlete(Athlete athlete)
-		{
-			using (Context context = GetContext())
-			{
-				context.Athletes.Add(athlete);
-				context.SaveChanges();
-			}
-		}
 
 	}
 }
