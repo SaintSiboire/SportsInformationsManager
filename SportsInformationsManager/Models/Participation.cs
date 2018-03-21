@@ -11,8 +11,8 @@ namespace SportsInformationsManager.Models
 	{
 
 		public int Id { get; set; }
-		public int AthleteId { get; set; }
 		public int CompetitionId { get; set; }
+		public int AthleteId { get; set; }	
 		public int ResultId { get; set; }
 
 		public Athlete Athlete { get; set; }

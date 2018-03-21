@@ -53,7 +53,8 @@ namespace SportsInformationsManager.Data
 			var athlete1 = new Athlete()
             {
                 FirstName = "Bob",
-                LastName = "Marley",               
+                LastName = "Marley",
+				Naissance = new DateTime(1990,02,01)
             };
 			context.Athletes.Add(athlete1);
 			
@@ -62,20 +63,23 @@ namespace SportsInformationsManager.Data
             {
                 FirstName = "Jacques",
                 LastName = "Plante",
-            };
+				Naissance = new DateTime(1990, 02, 01)
+			};
 			context.Athletes.Add(athlete2);
 
 			var athlete3 = new Athlete()
             {
                 FirstName = "Yves",
                 LastName = "Morissette",
-            };
+				Naissance = new DateTime(1990, 02, 01)
+			};
 			context.Athletes.Add(athlete3);
 
 			var athlete4 = new Athlete()
 			{
 				FirstName = "Elvis",
 				LastName = "Presley",
+				Naissance = new DateTime(1990, 02, 01)
 			};
 			context.Athletes.Add(athlete4);
 
@@ -83,6 +87,7 @@ namespace SportsInformationsManager.Data
 			{
 				FirstName = "Chuck",
 				LastName = "Noris",
+				Naissance = new DateTime(1990, 02, 01)
 			};
 			context.Athletes.Add(athlete5);
 
@@ -119,10 +124,10 @@ namespace SportsInformationsManager.Data
 				SportId = 2,
 				CompetitionDate = new DateTime(2018,3,1)
 			};
-			competition1.AddAthlete(athlete5, result1);
-			competition1.AddAthlete(athlete3, result2);
-			competition1.AddAthlete(athlete1, result3);
-			competition1.AddAthlete(athlete2, result4);
+			competition2.AddAthlete(athlete5, result1);
+			competition2.AddAthlete(athlete3, result2);
+			competition2.AddAthlete(athlete1, result3);
+			competition2.AddAthlete(athlete2, result4);
 			context.Competitions.Add(competition2);
 
 			

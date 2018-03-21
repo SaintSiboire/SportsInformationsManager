@@ -12,9 +12,9 @@ namespace SportsInformationsManager.Models
 		{
 			Competitions = new List<Participation>();
 		}
- 
 
-        public int Id { get; set; }
+
+		public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 		public DateTime Naissance { get; set; }
