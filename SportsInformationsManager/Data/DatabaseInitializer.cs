@@ -13,7 +13,41 @@ namespace SportsInformationsManager.Data
         protected override void Seed(Context context)
         {
 
-			
+			var result1 = new Result()
+			{
+				Rank = 1
+			};
+			context.Results.Add(result1);
+
+			var result2 = new Result()
+			{
+				Rank = 2
+			};
+			context.Results.Add(result2);
+
+			var result3 = new Result()
+			{
+				Rank = 3
+			};
+			context.Results.Add(result3);
+
+			var result4 = new Result()
+			{
+				Rank = 4
+			};
+			context.Results.Add(result4);
+
+			var result5 = new Result()
+			{
+				Rank = 5
+			};
+			context.Results.Add(result5);
+
+			var result6 = new Result()
+			{
+				Rank = 6
+			};
+			context.Results.Add(result6);
 
 
 			var athlete1 = new Athlete()
@@ -73,6 +107,10 @@ namespace SportsInformationsManager.Data
                 SportId = 1,				
                 CompetitionDate = new DateTime(2018,3,1)
             };
+			competition1.AddAthlete(athlete4, result1);
+			competition1.AddAthlete(athlete1, result2);
+			competition1.AddAthlete(athlete5, result3);
+			competition1.AddAthlete(athlete2, result4);
 			context.Competitions.Add(competition1);
 
 			var competition2 = new Competition()
@@ -81,25 +119,13 @@ namespace SportsInformationsManager.Data
 				SportId = 2,
 				CompetitionDate = new DateTime(2018,3,1)
 			};
+			competition1.AddAthlete(athlete5, result1);
+			competition1.AddAthlete(athlete3, result2);
+			competition1.AddAthlete(athlete1, result3);
+			competition1.AddAthlete(athlete2, result4);
 			context.Competitions.Add(competition2);
 
-			var result1 = new Result()
-			{
-				Position = 1
-			};
-			context.Results.Add(result1);
-
-			var result2 = new Result()
-			{
-				Position = 2
-			};
-			context.Results.Add(result2);
-
-			var result3 = new Result()
-			{
-				Position = 3
-			};
-			context.Results.Add(result3);
+			
 
 
 

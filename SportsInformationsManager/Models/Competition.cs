@@ -22,6 +22,15 @@ namespace SportsInformationsManager.Models
 		
 		public ICollection<Participation> Athletes { get; set; }
 
+		public void AddAthlete(Athlete athlete, Result result)
+		{
+			Athletes.Add(new Participation()
+			{
+				Athlete = athlete,
+				Result = result
+			});
+		}
+
 
 	}
 }
