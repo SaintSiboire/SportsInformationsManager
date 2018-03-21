@@ -18,16 +18,9 @@ namespace SportsInformationsManager
 				var competitions = context.Competitions
 					.ToList();
 
-				var groupJoinQuery2 =
-				from a in context.Athletes
-				from c in context.Competitions
-				join p in context.Participations
-				on new { a.Id, c.CompetitionId } equals new { p.AthleteId, p.CompetitionId }
-				into pac
-				from r in pac
-				select new {};
+		
 
-				foreach (var competition in competitions)
+				foreach(var competition in competitions)
 				{
 					var lieu = competition.Location;
 					//var sport = competition.Sport.Name;
