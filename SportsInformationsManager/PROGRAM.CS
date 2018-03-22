@@ -16,7 +16,7 @@ namespace SportsInformationsManager
 			using (var context = new Context())
 			{
 
-				var competitions = context.Competitions.ToList();
+				var competitions = DisplayCompetitions.GetCompetitions();
 
 				foreach (var c in competitions)
 				{
@@ -40,7 +40,7 @@ namespace SportsInformationsManager
 
 				}
 
-				var athletes = context.Athletes.ToList();
+				var athletes = DisplayAthletes.GetAthletes();
 
 				Console.WriteLine("Tous les athlètes");
 				Console.WriteLine();
