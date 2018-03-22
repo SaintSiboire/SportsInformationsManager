@@ -15,13 +15,7 @@ namespace SportsInformationsManager
 		{
 			using (var context = new Context())
 			{
-				var participations = context.Participations
-					.ToList();
 
-
-
-				//foreach (var participation in participations)
-				//{
 				var competitions = context.Competitions.ToList();
 
 				foreach (var c in competitions)
@@ -46,9 +40,8 @@ namespace SportsInformationsManager
 
 				}
 
-
 				var athletes = context.Athletes.ToList();
-				//Console.WriteLine("Athlètes participants à la compétition :");
+
 				Console.WriteLine("Tous les athlètes");
 				Console.WriteLine();
 
@@ -60,14 +53,6 @@ namespace SportsInformationsManager
 					Console.WriteLine("Date de naissance : {0}", a.Naissance);
 					Console.WriteLine();
 				}
-
-
-			
-
-
-				
-				
-				
 
 				Console.ReadLine();
 			}
