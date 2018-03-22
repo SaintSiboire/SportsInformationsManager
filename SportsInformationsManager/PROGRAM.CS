@@ -39,7 +39,8 @@ namespace SportsInformationsManager
 					foreach(var i in at)
 					{
 						
-						Console.WriteLine("");
+						Console.WriteLine("Nom : {0} {1}",context.Athletes.FirstOrDefault(a => a.Id == i.AthleteId).FirstName,
+														  context.Athletes.FirstOrDefault(a => a.Id == i.AthleteId).LastName);
 						Console.WriteLine();
 					}
 
