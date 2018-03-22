@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace SportsInformationsManager
 {
-    class Program 
+    class Program
     {
 		static void Main(string[] args)
 		{
@@ -30,16 +30,16 @@ namespace SportsInformationsManager
 
 					var ac = c.Athletes.ToList();
 
-					foreach (var a in ac)
+					foreach(var a in ac)
 					{
-						Console.WriteLine("Nom = {0} {1}", context.Athletes.FirstOrDefault(at => at.Id == a.AthleteId).FirstName, context.Athletes.FirstOrDefault(at => at.Id == a.AthleteId).LastName);
+						Console.WriteLine("Nom = {0} {1}",context.Athletes.FirstOrDefault(at => at.Id == a.AthleteId).FirstName, context.Athletes.FirstOrDefault(at => at.Id == a.AthleteId).LastName);
 						Console.WriteLine();
 					}
 
 
 				}
 
-
+				
 
 				Console.ReadLine();
 			}

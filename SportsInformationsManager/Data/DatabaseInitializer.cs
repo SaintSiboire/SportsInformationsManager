@@ -54,7 +54,7 @@ namespace SportsInformationsManager.Data
             {
                 FirstName = "Bob",
                 LastName = "Marley",
-				Naissance = new DateTime(1991,02,01)
+				Naissance = new DateTime(1991,02,11)
             };
 			context.Athletes.Add(athlete1);
 			
@@ -63,7 +63,7 @@ namespace SportsInformationsManager.Data
             {
                 FirstName = "Jacques",
                 LastName = "Plante",
-				Naissance = new DateTime(1992, 02, 02)
+				Naissance = new DateTime(1992, 07, 08)
 			};
 			context.Athletes.Add(athlete2);
 
@@ -71,7 +71,7 @@ namespace SportsInformationsManager.Data
             {
                 FirstName = "Yves",
                 LastName = "Morissette",
-				Naissance = new DateTime(1993, 02, 03)
+				Naissance = new DateTime(1993, 01, 03)
 			};
 			context.Athletes.Add(athlete3);
 
@@ -79,7 +79,7 @@ namespace SportsInformationsManager.Data
 			{
 				FirstName = "Elvis",
 				LastName = "Presley",
-				Naissance = new DateTime(1994, 02, 04)
+				Naissance = new DateTime(1994, 05, 24)
 			};
 			context.Athletes.Add(athlete4);
 
@@ -87,7 +87,7 @@ namespace SportsInformationsManager.Data
 			{
 				FirstName = "Chuck",
 				LastName = "Noris",
-				Naissance = new DateTime(1995, 02, 05)
+				Naissance = new DateTime(1995, 02, 15)
 			};
 			context.Athletes.Add(athlete5);
 
