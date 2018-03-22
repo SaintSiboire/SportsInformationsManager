@@ -28,6 +28,7 @@ namespace SportsInformationsManager
 					Console.WriteLine();
 					Console.WriteLine("Athlètes :");
 
+
 					var ac = c.Athletes.ToList();
 
 					foreach(var a in ac)
