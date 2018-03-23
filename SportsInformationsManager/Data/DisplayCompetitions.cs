@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using SportsInformationsManager.Models;
 using System.Data.Entity;
 
-namespace SportsInformationsManager.Data
+namespace SportsInformationsManager.Data 
 {
-	public static class DisplayCompetitions
+	public class DisplayCompetitions : ICompetitions
 	{
 		static Context GetContext()
 		{
@@ -16,7 +16,7 @@ namespace SportsInformationsManager.Data
 			//Database.Log
 			return context;
 		}
-		public static List<Competition> GetCompetitions()
+		public List<Competition> GetCompetitions()
 		{
 
 			using (Context context = GetContext())

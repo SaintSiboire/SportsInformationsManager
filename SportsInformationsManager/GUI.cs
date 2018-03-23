@@ -17,12 +17,6 @@ namespace SportsInformationsManager
 			InitializeComponent();
 		}
 
-		public Data.AddCompetition AddCompetition
-		{
-			get => default(Data.AddCompetition);
-			set
-			{
-			}
-		}
+		
 	}
 }

@@ -1,7 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SportsInformationsManager.Data.Context">
-    <Position X="9" Y="9.25" Width="1.5" />
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <AssociationLine Name="Participations" Type="SportsInformationsManager.Models.Participation" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="7.456" />
+        <Point X="8.125" Y="7.456" />
+        <Point X="8.125" Y="12.812" />
+        <Point X="8.5" Y="12.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Results" Type="SportsInformationsManager.Models.Result" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="6.777" />
+        <Point X="5.438" Y="6.777" />
+        <Point X="5.438" Y="12.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAgAAAACACAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Data\Context.cs</FileName>
@@ -10,31 +25,59 @@
       <Property Name="Competitions" />
       <Property Name="Sports" />
       <Property Name="Athletes" />
+      <Property Name="Participations" />
+      <Property Name="Results" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SportsInformationsManager.Data.DatabaseInitializer">
-    <Position X="14.25" Y="9.5" Width="1.5" />
+    <Position X="13.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Data\DatabaseInitializer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SportsInformationsManager.Models.Athlete">
-    <Position X="9" Y="11.5" Width="1.5" />
+    <Position X="8.75" Y="8.75" Width="1.5" />
+    <AssociationLine Name="Competitions" Type="SportsInformationsManager.Models.Participation" FixedToPoint="true">
+      <Path>
+        <Point X="10.167" Y="10.882" />
+        <Point X="10.167" Y="12.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAAAg=</HashCode>
       <FileName>Models\Athlete.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Competitions" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SportsInformationsManager.Models.Competition">
-    <Position X="11.75" Y="11.5" Width="1.5" />
+    <Position X="11.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAADAAAAAAAAAAAAAAIACAAAQAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Models\Competition.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Athletes" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SportsInformationsManager.Models.Participation">
-    <Position X="9.25" Y="14.5" Width="1.5" />
+    <Position X="8.5" Y="12.5" Width="2" />
+    <AssociationLine Name="Athlete" Type="SportsInformationsManager.Models.Athlete" FixedFromPoint="true">
+      <Path>
+        <Point X="8.667" Y="12.5" />
+        <Point X="8.667" Y="12.125" />
+        <Point X="9.5" Y="12.125" />
+        <Point X="9.5" Y="10.882" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Result" Type="SportsInformationsManager.Models.Result" FixedFromPoint="true">
+      <Path>
+        <Point X="8.5" Y="13.312" />
+        <Point X="6.25" Y="13.312" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAKAACAAAAAAAAAAAAAIAQAAACAAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Models\Participation.cs</FileName>
@@ -46,7 +89,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SportsInformationsManager.Models.Sport">
-    <Position X="6.5" Y="11.5" Width="1.5" />
+    <Position X="6.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Sport.cs</FileName>
@@ -86,20 +129,28 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAAA=</HashCode>
       <FileName>Data\DisplayCompetitions.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SportsInformationsManager.GUI" Collapsed="true">
     <Position X="9.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAQACAAAACCMA4AAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACCMA4AAAAAAAAAAAAAAA=</HashCode>
       <FileName>GUI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SportsInformationsManager.Models.Result">
-    <Position X="6.75" Y="14.75" Width="1.5" />
+    <Position X="4.75" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Result.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="SportsInformationsManager.ICompetitions">
+    <Position X="7.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICompetitions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
