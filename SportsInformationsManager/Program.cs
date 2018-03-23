@@ -9,16 +9,19 @@ using System.Data.Entity;
 
 namespace SportsInformationsManager
 {
-    class Program
+    static class Program
     {
 		static void Main(string[] args)
 		{
+			ICompetitions competitions = new DisplayCompetitions();
+			
 			using (var context = new Context())
 			{
+				
 
-				var competitions = context.Competitions.ToList();
+				var competitionsList = competitions.GetCompetitions();
 
-				foreach (var c in competitions)
+				foreach (var c in competitionsList)
 				{
 
 					Console.WriteLine("Emplacement : {0}", c.Location);
@@ -30,24 +33,24 @@ namespace SportsInformationsManager
 
 					var at = c.Athletes.ToList();
 
-					foreach(var i in at)
+					foreach (var i in at)
 					{
-						
-						Console.WriteLine("Nom : {0} {1}",context.Athletes.FirstOrDefault(a => a.Id == i.AthleteId).FirstName,
+
+						Console.WriteLine("Nom : {0} {1}", context.Athletes.FirstOrDefault(a => a.Id == i.AthleteId).FirstName,
 														  context.Athletes.FirstOrDefault(a => a.Id == i.AthleteId).LastName);
 						Console.WriteLine();
 					}
 
 				}
 
-				var athletes = context.Athletes.ToList();
+				var athletes = DisplayAthletes.GetAthletes();
 
 				Console.WriteLine("Tous les athlètes");
 				Console.WriteLine();
 
 				foreach (var a in athletes)
 				{
-					
+
 
 					Console.WriteLine("Nom : {0} {1}", a.FirstName, a.LastName);
 					Console.WriteLine("Date de naissance : {0}", a.Naissance);
